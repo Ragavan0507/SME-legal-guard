@@ -1,0 +1,5 @@
+pip install streamlit
+pip install pdfplumber
+pip install python-docx
+pip install openai
+pip install fpdf
