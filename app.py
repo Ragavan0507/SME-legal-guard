@@ -15,7 +15,18 @@ except ImportError:
 
 # --- 2. CONFIGURATION & API SETUP ---
 st.set_page_config(page_title="SME Legal Guard", layout="wide", page_icon="⚖️")
-
+# --- HIDE STREAMLIT BRANDING ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            div[data-testid="stToolbar"] {display: none !important;}
+            div[data-testid="stDecoration"] {display: none !important;}
+            #GithubIcon {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # CLOUD DEPLOYMENT TIP: 
 # For local testing, replace st.secrets["GITHUB_TOKEN"] with your "Actual_Token_String"
 # For live deployment, use st.secrets for security.
@@ -215,4 +226,5 @@ if uploaded_file:
 
 # --- FOOTER ---
 st.markdown("---")
+
 st.caption("Disclaimer: This tool is AI-powered and intended for guidance. It is not a substitute for legal advice.")
