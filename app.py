@@ -18,12 +18,13 @@ st.set_page_config(page_title="SME Legal Guard", layout="wide", page_icon="âš–ï¸
 # --- HIDE STREAMLIT BRANDING ---
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
+            viewer-badge {display: none !important;}
             div[data-testid="stToolbar"] {display: none !important;}
             div[data-testid="stDecoration"] {display: none !important;}
-            #GithubIcon {visibility: hidden;}
+            GithubIcon {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
@@ -228,3 +229,4 @@ if uploaded_file:
 st.markdown("---")
 
 st.caption("Disclaimer: This tool is AI-powered and intended for guidance. It is not a substitute for legal advice.")
+
